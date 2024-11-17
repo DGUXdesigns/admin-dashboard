@@ -1,4 +1,9 @@
-
+:root {
+    --prim-clr: #100c08;
+    --secondary-clr: #dbe0e1;
+    --txt-clr: #f3f4f5;
+    --accent: #ff9408;
+}
 
 body {
     height: 100vh;
@@ -12,7 +17,6 @@ body {
 
 aside {
     grid-area: aside;
-    background: blue;
 }
 
 main {
