@@ -3,24 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="./stylesheet.css">
   <title>Admin Dashboard | Dave The Dev</title>
 </head>
 <body>
 	
 	<aside class="sidebar">
-		<h1>Dashboard</h1>
-		<ul class="menu">
-			<li>Home</li>
-			<li>Profile</li>
-			<li>Messages</li>
-			<li>History</li>
-			<li>Tasks</li>
-			<li>Communities</li>
+		<div class="title">
+			<a href="#home">
+				<i class="material-icons">dashboard</i>
+				<h2>Dashboard</h2>
+			</a>
+		</div>
+		
+
+		<ul class="links">
+			<li><a href="#home"><i class="material-icons">home</i>Home</a></li>
+			<li><a href="#profile"><i class="material-icons">person</i>Profile</a></li>
+			<li><a href="#messages"><i class="material-icons">chat_bubble</i>Messages</a></li>
+			<li><a href="#history"><i class="material-icons">history</i>History</a></li>
+			<li><a href="#tasks"><i class="material-icons">assignment</i>Tasks</a></li>
+			<li><a href="#communities"><i class="material-icons">groups</i>Communities</a></li>
 		</ul>
+
 		<ul class="support">
-			<li>Settings</li>
-			<li>Support</li>
-			<li>Privacy</li>
+			<li><a href="#home"><i class="material-icons">settings</i>Settings</a></li>
+			<li><a href="#home"><i class="material-icons">help_center</i>Support</a></li>
+			<li><a href="#home"><i class="material-icons">verified_user</i>Privacy</a></li>
 		</ul>
 	</aside>
 
@@ -57,9 +67,9 @@
 		</div>
 
 		<main>
-			<div class="projects"></div>
-			<div class="announcements"></div>
-			<div class="trending"></div>
+			<div class="projects">projects</div>
+			<div class="announcements">announcements</div>
+			<div class="trending">trending</div>
 		</main>
 		
 	</header>
