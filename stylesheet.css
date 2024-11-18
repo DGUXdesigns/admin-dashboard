@@ -6,10 +6,32 @@
     --secondary-clr: #dbe0e1;
     --txt-clr: #f3f4f5;
     --accent: #ff9408;
-    font-family: Satoshi-Regular;
+    font-family: Satoshi-Regular, Helvetica, sans-serif;
     color: var(--secondary-clr);
     box-sizing: border-box;
     padding: 0;
+}
+
+h2{
+    font-family: Satoshi-Bold, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.0275rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+p {
+    font-family: Satoshi-Regular, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.1;
+}
+
+button {
+    border: none;
+    background: var(--accent);
+    height: 2.25rem;
+    width: 5rem;
+    border-radius: 2rem;
+    font-family: Satoshi-Bold, Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -17,7 +39,7 @@ body {
     margin: 0;
     text-align: left;
     display: grid;
-    grid-template: 1fr 3fr / 1fr 4fr;
+    grid-template: auto 4fr / 1fr 4fr;
     grid-template-areas: 
     "aside header"
     "aside main";
@@ -39,6 +61,8 @@ aside {
     display: flex;
     flex-direction: column; 
     padding-top: 0.5rem;
+    box-shadow: 0.1px 0px 2px var(--secondary-clr);
+    z-index: 1;
 }
 
 .title a {
@@ -61,18 +85,92 @@ aside ul li a {
     padding: 0.5rem 1.5rem;
 }
 
+/* Header Styling */
+header {
+    grid-area: header;
+    background: #131211;
+    display: grid;
+    margin: 0;
+    gap: 1px;
+    grid-template: 1fr/ 2fr 1fr;
+    padding-bottom: 1rem;
+}
+
+/* search bar */
+label {
+    display: flex;
+    gap: 8px;
+    height: 32px;
+    padding: 1.5rem;
+    align-items: center;
+}
+
+input {
+    box-sizing: border-box;
+    height: 2rem;
+    background: rgba(174, 172, 146, 0.20);
+    border: none;
+    border-radius: 1rem;
+    padding: 0 1rem;
+}
+
+/* User Info */
+.user-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem;
+
+}
+.avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* greeting */
+.bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem;
+}
+
+.image {
+    height: 60px;
+    width: 60px;
+    background-image: url(./images/man.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.greeting p,
+.greeting h2 {
+    margin: 0;
+}
+
+/* button container */
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+}
 
 
-
-
-
-
+/*  */
 main {
     grid-area: main;
     background: pink;
 }
 
-header {
-    grid-area: header;
-    background: green;
-}

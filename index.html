@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="./stylesheet.css">
-  <title>Admin Dashboard | Dave The Dev</title>
+	<title>Admin Dashboard | Dave The Dev</title>
 </head>
+
 <body>
-	
+
 	<aside class="sidebar">
 		<div class="title">
 			<a href="#home">
@@ -16,7 +18,6 @@
 				<h2>Dashboard</h2>
 			</a>
 		</div>
-		
 
 		<ul class="links">
 			<li><a href="#home"><i class="material-icons">home</i>Home</a></li>
@@ -35,43 +36,39 @@
 	</aside>
 
 	<header>
-		<div class="search-bar">
-			<label for="search">
-				<!-- TODO: Add Icon -->
-				Search
-				<input type="text" name="search" id="search">
-			</label>
+		<label for="search">
+			<input type="text" name="search" id="search" placeholder="Search">
+			<i class="material-icons">search</i>
+		</label>
 
-			<div class="user-info">
-				<p>notifications</p>
-				<p>img</p>
-				<h3>Dave The Dev</h3>
+		<div class="user-info">
+			<i class="material-icons">notifications</i>
+			<div class="avatar">
+				<img src="./images/man.png" alt="User's profile picture" class="avatar">
+			</div>
+			<h3>Dave The Dev</h3>
+		</div>
+
+		<div class="bottom-left">
+			<div class="image"> </div>
+			<div class="greeting">
+				<p>Hi there,</p>
+				<h2>Dave The Dave(@Dave)</h2>
 			</div>
 		</div>
 
-		<div class="header-bottom">
-			<div class="bottom-left">
-				<!-- TODO: Add image -->
-				<p>user image</p> 
-				<div class="greeting">
-					<p>Hi There,</p>
-					<h2>Dave The Dave(@Dave)</h2>
-				</div>
-			</div>
-
-			<div class="bottom-right">
-				<button>New</button>
-				<button>Upload</button>
-				<button>Share</button>
-			</div>
+		<div class="btn-container">
+			<button>New</button>
+			<button>Upload</button>
+			<button>Share</button>
 		</div>
-
-		<main>
-			<div class="projects">projects</div>
-			<div class="announcements">announcements</div>
-			<div class="trending">trending</div>
-		</main>
-		
 	</header>
+
+	<main>
+		<div class="projects">projects</div>
+		<div class="announcements">announcements</div>
+		<div class="trending">trending</div>
+	</main>
 </body>
+
 </html>
