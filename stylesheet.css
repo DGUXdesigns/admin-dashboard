@@ -4,12 +4,12 @@
 :root {
     --prim-clr: #100c08;
     --secondary-clr: #dbe0e1;
-    --txt-clr: #f3f4f5;
     --accent: #ff9408;
     font-family: Satoshi-Regular, Helvetica, sans-serif;
     color: var(--secondary-clr);
     box-sizing: border-box;
     padding: 0;
+    margin: 0;
 }
 
 h2{
@@ -17,12 +17,21 @@ h2{
     letter-spacing: 0.0275rem;
     font-size: 1.5rem;
     line-height: 1.2;
+    margin: 0;
 }
 
 p {
     font-family: Satoshi-Regular, Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.1;
+    margin: 0;
+}
+
+h3 {
+    font-family: Satoshi-Bold, Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.1;
+    margin: 0;
 }
 
 button {
@@ -60,8 +69,8 @@ aside {
     background: var(--prim-clr);
     display: flex;
     flex-direction: column; 
-    padding-top: 0.5rem;
-    box-shadow: 0.1px 0px 2px var(--secondary-clr);
+    padding-top: 1.5rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1;
 }
 
@@ -139,8 +148,8 @@ input {
 }
 
 .image {
-    height: 60px;
-    width: 60px;
+    min-height: 60px;
+    min-width: 60px;
     background-image: url(./images/man.png);
     background-size: cover;
     background-position: center;
@@ -168,9 +177,65 @@ input {
 }
 
 
-/*  */
+/* Main Styling */
 main {
     grid-area: main;
-    background: pink;
+    background-color: #201A17;
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+    grid-template: repeat(2, 1fr) / 3fr 1fr;
+    grid-template-areas: 
+    "projects announcements"
+    "projects trending";
 }
 
+/* projects section */
+.projects {
+    grid-area: projects;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) ;
+    gap: 1rem;
+}
+
+.card {
+    background-color: #131211;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    height: auto;
+    min-height: 150px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left:8px solid var(--accent);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+
+/* announcements */
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
+}
