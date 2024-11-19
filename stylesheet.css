@@ -44,7 +44,6 @@ h4 {
     margin: 0;
 }
 
-/* TODO: Add button Hover States */
 button {
     border: none;
     background: var(--accent);
@@ -54,8 +53,15 @@ button {
     font-family: Satoshi-Bold, Arial, Helvetica, sans-serif;
 }
 
+button:hover {
+    background-color: #ffb84d;
+    color: var(--prim-clr); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.1); 
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
+}
+
 body {
-    overflow: auto;
     height: 100vh;
     margin: 0;
     text-align: left;
@@ -104,6 +110,17 @@ aside ul li a {
     gap: 0.5rem;
     align-items: center;
     padding: 0.5rem 1.5rem;
+}
+
+/* Hover effect for entire li block */
+aside ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+    transition: background-color 0.3s ease; 
+}
+
+aside ul li:hover a {
+    color: var(--accent);
+    transition: color 0.3s ease;
 }
 
 /* Header Styling */
